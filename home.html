@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <script src="home.js"></script>
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="images/logo.png" class ="logo" alt="petalpoint"> </a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="home.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="home-1">
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radiobtn" id="r-1">
+                <input type="radio" name="radiobtn" id="r-2">
+                <input type="radio" name="radiobtn" id="r-3">
+                <input type="radio" name="radiobtn" id="r-4">
+                <input type="radio" name="radiobtn" id="r-5">
+
+                <div class="slide first">
+                    <img class="caroimg" src="images/1.png" style="width: 100%" alt="Roses">
+                </div>
+                <div class="slide">
+                    <img class="caroimg" src="images/2.png" style="width: 100%" alt="Sunflower">
+                </div>
+                <div class="slide">
+                    <img class="caroimg" src="images/3.png" style="width: 100%" alt="jasmine">
+                </div>
+                <div class="slide">
+                    <img class="caroimg" src="images/4.png" style="width: 100%" alt="Dahlia">
+                </div>
+                <div class="slide">
+                    <img class="caroimg" src="images/5.png" style="width: 100%" alt="Lilac">
+                </div>
+
+                <div class="autonav">
+                    <div class="autobtn1"></div>
+                    <div class="autobtn2"></div>
+                    <div class="autobtn3"></div>
+                    <div class="autobtn4"></div>
+                    <div class="autobtn5"></div>
+                </div>
+            </div>
+            <div class="manualnav">
+                <label for="r-1" class="manualbtn"></label>
+                <label for="r-2" class="manualbtn"></label>
+                <label for="r-3" class="manualbtn"></label>
+                <label for="r-4" class="manualbtn"></label>
+                <label for="r-5" class="manualbtn"></label>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        var count=1;
+        setInterval(function(){
+            document.getElementById('r-'+count).checked = true;
+            count++;
+            if(count>5){
+                count=1;
+            }
+        },5000);
+    </script>
+
+    
+</body>
+</html>
